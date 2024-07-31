@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="459.0" prefWidth="671.0" style="-fx-background-color: #FDA7DF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BorrowController">
+   <children>
+      <Label layoutX="188.0" layoutY="7.0" text="Borrow Details" textFill="#0d1c1d">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="77.0" prefHeight="21.0" prefWidth="89.0" text="Member ID">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMemberID" layoutX="141.0" layoutY="75.0" promptText="Enter Member ID" />
+      <Label layoutX="34.0" layoutY="120.0" prefHeight="21.0" prefWidth="61.0" text="Book ID">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBookID" layoutX="141.0" layoutY="118.0" promptText="Enter Book ID" />
+      <Label layoutX="354.0" layoutY="77.0" prefHeight="21.0" prefWidth="69.0" text="Issue Date">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDueDate" layoutX="459.0" layoutY="75.0" promptText="Enter issue Date" />
+      <Label layoutX="354.0" layoutY="110.0" prefHeight="21.0" prefWidth="89.0" text="Return Date">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtReturnDate" layoutX="459.0" layoutY="108.0" promptText="Enter Return Date" />
+      <TableView fx:id="tblborrow" layoutX="36.0" layoutY="209.0" prefHeight="181.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="colmemberid" prefWidth="120.0" text="Member ID" />
+            <TableColumn fx:id="colbookid" prefWidth="120.0" text="Book ID" />
+            <TableColumn fx:id="colissuedate" prefWidth="120.0" text="Issue Date" />
+            <TableColumn fx:id="colreturndate" prefWidth="120.0" text="Retuen Date" />
+            <TableColumn fx:id="colaction" prefWidth="120.0" text="Action" />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="489.0" layoutY="405.0" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="133.0" style="-fx-background-color: #eb3b5a;" text="SAVE CHANGES">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="631.0" style="-fx-background-color: #FDA7DF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MemberController">
+   <children>
+      <Label layoutX="236.0" layoutY="7.0" prefHeight="53.0" prefWidth="184.0" text="Members" textFill="#2b2d1f">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="72.0" prefHeight="22.0" prefWidth="42.0" text="ID">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMemberID" layoutX="78.0" layoutY="71.0" prefHeight="25.0" prefWidth="159.0" promptText="Enter Member ID" />
+      <Label layoutX="26.0" layoutY="107.0" prefHeight="22.0" prefWidth="53.0" text="Name">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMemberName" layoutX="78.0" layoutY="105.0" prefHeight="25.0" prefWidth="210.0" promptText="Enter Member Name" />
+      <Label layoutX="328.0" layoutY="73.0" prefHeight="22.0" prefWidth="87.0" text="Contact No">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtContactNumber" layoutX="415.0" layoutY="71.0" prefHeight="25.0" prefWidth="197.0" promptText="Enter Contact Number" />
+      <Label layoutX="328.0" layoutY="107.0" prefHeight="22.0" prefWidth="87.0" text="Address">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAddress" layoutX="415.0" layoutY="105.0" prefHeight="25.0" prefWidth="197.0" promptText="Enter Address" />
+      <TableView fx:id="tblmembers" layoutX="15.0" layoutY="179.0" prefHeight="224.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="colmemberid" prefWidth="120.0" text="ID" />
+          <TableColumn fx:id="colmembername" prefWidth="120.0" text="Name" />
+            <TableColumn fx:id="colnumber" minWidth="0.0" prefWidth="120.0" text="Contact No" />
+            <TableColumn fx:id="coladdress" minWidth="0.0" prefWidth="120.0" text="Address" />
+            <TableColumn fx:id="colaction" prefWidth="120.0" text="Action" />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="477.0" layoutY="415.0" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="134.0" style="-fx-background-color: #B53471;" text="SAVE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

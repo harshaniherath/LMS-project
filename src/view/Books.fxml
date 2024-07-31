@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="446.0" prefWidth="704.0" style="-fx-background-color: #D980FA;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BooksController">
+   <children>
+      <Label layoutX="296.0" layoutY="14.0" text="Books" textFill="#112b1e">
+         <font>
+            <Font name="System Bold" size="39.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="70.0" prefHeight="24.0" prefWidth="84.0" text="Book ID">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBookID" layoutX="118.0" layoutY="70.0" promptText="Enter Book ID" />
+      <Label layoutX="19.0" layoutY="105.0" prefHeight="24.0" prefWidth="84.0" text="Book Name">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBookName" layoutX="118.0" layoutY="105.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter Book Name" />
+      <Label layoutX="19.0" layoutY="141.0" prefHeight="24.0" prefWidth="84.0" text="Author">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAuthor" layoutX="118.0" layoutY="141.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter Book Author" />
+      <Label layoutX="360.0" layoutY="105.0" prefHeight="24.0" prefWidth="102.0" text="Category  ID">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCategoryID" layoutX="515.0" layoutY="105.0" promptText="Enter Category ID" />
+      <Label layoutX="360.0" layoutY="141.0" prefHeight="24.0" prefWidth="102.0" text="Copies">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAvailabaleCopies" layoutX="515.0" layoutY="141.0" promptText="Enter Available Copies" />
+      <TableView fx:id="tblbooks" layoutX="41.0" layoutY="188.0" prefHeight="200.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="colbookid" prefWidth="100.0" text="Book ID" />
+          <TableColumn fx:id="colbookname" prefWidth="100.0" text="Book Name" />
+            <TableColumn fx:id="colauthor" prefWidth="100.0" text="Author" />
+            <TableColumn fx:id="colcategoryid" prefWidth="100.0" text="Category ID" />
+            <TableColumn fx:id="colcopies" prefWidth="100.0" text="Copies" />
+            <TableColumn fx:id="colaction" prefWidth="100.0" text="Action" />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="532.0" layoutY="400.0" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="131.0" style="-fx-background-color: #833471;" text="SAVE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
